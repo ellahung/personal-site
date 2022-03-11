@@ -1,0 +1,15 @@
+version: 0.2 //一般YML檔都會有
+
+phases:
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: no
+  base-directory: build //code pipeline的特有寫法
